@@ -1,0 +1,48 @@
+﻿<Window x:Class="CryptoWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CryptoWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgCryptos"  CanUserAddRows="True" CanUserDeleteRows="True" CanUserResizeRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Header="Откуда" Binding="{Binding Path=from}"/>
+                <DataGridTextColumn Header="Куда" Binding="{Binding Path=to}"/>
+                <DataGridTextColumn Header="Сколько" Binding="{Binding Path=amount}"/>
+                <DataGridTextColumn Header="Тип валюты" Binding="{Binding Path=type}"/>
+                <DataGridTextColumn Header="Тип перевода" Binding="{Binding Path=transfer}"/>
+                <DataGridTextColumn Header="Дата перевода" Binding="{Binding Path=date}"/>
+                <DataGridTextColumn Header="Баланс" Binding="{Binding Path=balance}"/>
+                <DataGridTemplateColumn Header="Edit Action">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnEdit">Edit</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Delete Action">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnDelete">Delete</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="txtFrom" HorizontalAlignment="Left" Margin="46,145,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTo" HorizontalAlignment="Left" Margin="46,185,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAmount" HorizontalAlignment="Left" Margin="46,226,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtType" HorizontalAlignment="Left" Margin="218,185,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTransfer" HorizontalAlignment="Left" Margin="218,145,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Margin="218,226,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBalance" HorizontalAlignment="Left" Margin="400,145,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="46,270,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

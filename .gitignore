@@ -1,0 +1,13 @@
+/node_modules
+/packages
+CryptoAPI.sln
+package-lock.json
+package.json
+.vs
+/CryptoAPI/bin
+/CryptoAPI/obj
+/CryptoAPI/Properties
+/cryptoreactclient/node_modules
+/CryptoWpf/bin
+/CryptoWpf/Properties
+/CryptoWpf/obj
